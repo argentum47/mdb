@@ -19,7 +19,7 @@
       <input ng-model="search.title" name="search" placeholder="search movies" class="form-control"/>
     </div>
 
-    <div ng-repeat="(_, movieList) in moviesInGroups" class="row" itemscope itemtype="http://schema.org/Movie>
+    <div ng-repeat="(_, movieList) in moviesInGroups" class="row" itemscope itemtype="http://schema.org/Movie">
       <movie class="col-sm-4" ng-repeat="(_, movie) in movieList | filter:search">
         <a href="#/movie/{{movie.id}}/reviews" target="_self">
           <img ng-src="{{image.base_url + image.backdrop_size + (movie.backdrop_path || movie.poster_path) }}" data-id="{{movie.id}}" itemprop="image"/>
